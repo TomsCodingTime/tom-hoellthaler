@@ -1,0 +1,276 @@
+/* # FONTS # */
+@font-face {
+    font-family: "GaretBook";
+    src: url(../../includes/fonts/Garet/Garet-Book.woff2) format("woff2"),
+        url(../../includes/fonts/Garet/Garet-Book.woff) format("woff"),
+        url(../../includes/fonts/Garet/Garet-Book.ttf) format("truetype"),
+        url(../../includes/fonts/Garet/Garet-Book.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "GaretHeavy";
+    src: url(../../includes/fonts/Garet/Garet-Heavy.woff2) format("woff2"),
+        url(../../includes/fonts/Garet/Garet-Heavy.woff) format("woff"),
+        url(../../includes/fonts/Garet/Garet-Heavy.ttf) format("truetype"),
+        url(../../includes/fonts/Garet/Garet-Heavy.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "InriaSerifRegular";
+    src: url(../../includes/fonts/Inria/InriaSerif-Regular.woff2) format("woff2"),
+        url(../../includes/fonts/Inria/InriaSerif-Regular.woff) format("woff"),
+        url(../../includes/fonts/Inria/InriaSerif-Regular.ttf) format("truetype"),
+        url(../../includes/fonts/Inria/InriaSerif-Regular.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "CoolveticaCondensed";
+    src: url(../../includes/fonts/Coolvetica/coolvetica-condensed-rg.woff2) format("woff2"),
+        url(../../includes/fonts/Coolvetica/coolvetica-condensed-rg.woff) format("woff"),
+        url(../../includes/fonts/Coolvetica/coolvetica-condensed-rg.ttf) format("truetype"),
+        url(../../includes/fonts/Coolvetica/coolvetica-condensed-rg.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+/* # GLOBALS # */
+body {
+    background-color: #c4a18415;
+}
+h2 {
+    margin: 0 0 5% 3%;
+}
+a:link {
+    text-decoration: none;
+}
+li {
+    list-style-type: circle;
+}
+footer {
+    margin-bottom: -1%;
+}
+
+/* # GENERAL # */
+.container-fluid {
+    width: 80vw;
+    padding: 3em 3em 3em 5em;
+}
+.row {
+    padding: 0 0 0 0;
+}
+/*.py-5, .my-4 {*/
+/*    padding-bottom: 0rem!important;*/
+/*}*/
+
+/* # HERO # */
+.container-content {
+    margin: 0.4em 0em 0.4em 4em;
+    height: 94%;
+}
+.container-wlcm {
+    padding: 7% 25% 0% 0;
+    font-family: Safira March;
+    font-weight: 100;
+    font-size: 2.75em;
+    letter-spacing: 0.3px;
+    color: #707070;
+    text-align: right;
+    line-height: 1.3em;
+}
+.container-img {
+    margin: 1% 0 0 0;
+    border-radius: 23px;
+    background-color: violet;
+    width: 84%;
+    height: 97.7%;
+    overflow: hidden;
+    transition: box-shadow 0.4s ease-in-out;
+}
+.thumbnail {
+    transition: transform 0.8s, filter 0.6s ease-in-out;
+    filter: brightness(92%);
+}
+.container-img:hover {
+    box-shadow: 5px 5px 5px rgba(84, 167, 159, 0.7);
+}
+.thumbnail:hover {
+    filter: brightness(98%);
+    transform: scale(1.02);
+}
+/* SHINY */
+.shiny {
+    position: relative;
+    cursor: auto;
+}
+.shiny>a {
+    cursor: pointer;
+}
+.shiny::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--y, 0) * 1px - 30px);
+    left: calc(var(--x, 0) * 1px - 30px);
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(white, #3984ff00 80%);
+
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.shiny:hover::after {
+    opacity: 0.4;
+}
+/* Badge */
+.hovertext {
+    font-weight: 100;
+    font-size: 2.75em;
+    letter-spacing: 0.3px;
+    color: #54a79fD3;
+    line-height: 1.3em;
+    position: relative;
+}
+.hovertext:before {
+    content: attr(data-hover);
+    text-align: center;
+    visibility: hidden;
+    top: 500%;
+    opacity: 0.1;
+    transition: opacity 0.7s ease-in-out;
+    -webkit-transition: opacity 0.7s ease-in-out;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.hovertext:hover:before {
+    background-image: linear-gradient(to right, #f9f7f4 , #f9f7f4B0);
+    opacity: 1;
+    visibility: visible;
+}
+
+#company-logo {
+    width: 115px;
+    margin: 1.5% 0 35% -1%;
+    opacity: 0.85;
+}
+#company-name {
+    width: 100%;
+    margin: 0 0 5% -1%;
+}
+#company-title {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: GaretHeavy;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 0.2em;
+    line-height: 0.3em;
+    color: #54a79f;
+}
+#company-sub-title {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0.35%;
+    font-family: InriaSerifRegular;
+    text-transform: uppercase;
+    font-size: 4.5em;
+    letter-spacing: 0.1em;
+    color: #378098;
+}
+
+/* # PERSON # */
+.row-cv {
+    margin: 2em 0 0 -2.5em;
+}
+.spacer {
+    padding-left: 5%;
+}
+.no-bullet {
+    list-style-type: none;
+}
+.highlighting {
+    font-weight: 500;
+}
+.cv-list {
+    margin: 1% 0 4% 0;
+}
+.left {
+    text-align: right;
+}
+.left-long {
+    margin: 0 0 0 -1.25%;
+}
+.right {
+    margin: 0 0 1% 0;
+}
+.divider {
+    width: 620px;
+    margin: 1% auto 2% auto;
+}
+
+#col-3-1, #col-3-2 {
+    padding: 1em;
+}
+
+/* # INTERESTS # */
+interests {
+    position: relative;
+}
+.img-interests {
+    width: 99vw;
+    border-radius: 23px;
+}
+.img-interests-top {
+    margin: 0 0 0 3.75%;
+}
+.img-interests-bottom {
+    margin: 0 0 0 -3.75%;
+}
+.txt-interests {
+    padding: 1% 0 0 0;
+}
+.top-right {
+    position: absolute;
+    top: 62%;
+    right: 4%;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 62%;
+    left: 7.5%;
+}
+
+/* # BACK-TO-TOP # */
+.fa-arrow-up {
+    margin: -25% 0 0 0;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    height: 5.25%;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: rgba(84, 167, 159, 0.7);
+    border: none;
+    border-radius: 50%;
+}
+
+/* # FOOTER # */
+footer .icons {
+    width: 1.1em;
+    vertical-align: baseline;
+}
+.footer-name {
+    margin: -2% 0 0 -7.5%;
+    padding: 0;
+    width: 420px;
+}
+.footer-fluid {
+    padding: 0em 5em;
+}
