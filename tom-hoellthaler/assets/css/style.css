@@ -222,14 +222,17 @@ interests {
     position: relative;
 }
 .img-interests {
-    width: 99vw;
-    border-radius: 23px;
+    width: 99.1vw;
 }
 .img-interests-top {
-    margin: 0 0 0 3.75%;
+    margin: 0 0 0 4.75%;
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
 }
 .img-interests-bottom {
     margin: 0 0 0 -3.75%;
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
 }
 .txt-interests {
     padding: 1% 0 0 0;
