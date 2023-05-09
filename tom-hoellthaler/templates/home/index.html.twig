@@ -3,58 +3,99 @@
 {% block title %}Webdevelopment by Tom Hoellthaler{% endblock %}
 
 {% block body %}
-    <hero>
-        {% include 'home/hero.html.twig' %}
-    </hero>
+    <div style="height:50px;"></div>
+    <div class="container box">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light nav-justified nav-tabs">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="mainNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="">One</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Two</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Three</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
-    <main>
-        <button type="button" id="btn-back-to-top" class="btn btn-danger btn-floating btn-lg">
-            <img class="fas fa-arrow-up" src="../includes/icons/chevron-up.svg">
-        </button>
-
-        {% include 'home/person.html.twig' %}
-        {% include 'home/interests.html.twig' %}
-        {% include 'home/code.html.twig' %}
-
-    </main>
-    
-    <footer>
-        {% include 'footer.html.twig' %}
-    </footer>
-
-    <script type='text/javascript'>
-        const button = document.querySelector(".shiny");
-
-        const readout = document.querySelector("p");
-
-        button.addEventListener("mousemove", (e) => {
-            const { x, y } = button.getBoundingClientRect();
-            button.style.setProperty("--x", e.clientX - x);
-            button.style.setProperty("--y", e.clientY - y);
-        });
-
-        //Get the button
-        let mybutton = document.getElementById("btn-back-to-top");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction();
-        };
-
-        function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-        }
-        // When the user clicks on the button, scroll to the top of the document
-        mybutton.addEventListener("click", backToTop);
-
-        function backToTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
+    <div class="container box">
+        <p class="h1">Container 1</p>
+        <div>Container 1</div>
+        <img class="img-fluid" src="..\includes\images\fp_website_mockup.png">
+    </div><br/>
+    <div class="container box">
+        <div>Regular Container</div>
+        <div class="row">
+            <div class="col-sm-6 box">
+                one
+            </div>
+            <div class="col-sm box">
+                two
+            </div>
+            <div class="col-sm box">
+                three
+            </div>
+            <div class="col-sm box">
+                four
+            </div>
+            <div class="col-sm box">
+                five
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 display-1 box">
+                one
+            </div>
+            <div class="col-xl display-2 box">
+                two
+            </div>
+            <div class="col-xl display-3 box">
+                three
+            </div>
+            <div class="col-xl display-4 box">
+                four
+            </div>
+            <div class="col-xl display-5 box">
+                five
+            </div>
+        </div>
+    </div><br/>
+    <div class="container-fluid box">
+        <div>Fluid Container</div>
+        <div class="row">
+            <div class="col-6 box">
+                one
+            </div>
+            <div class="col box">
+                two
+            </div>
+            <div class="col box">
+                three
+            </div>
+        </div>
+    </div><br/>
+    <div class="container-fluid box">
+        <table class="table table-striped table-bordered table-primary table-hover">
+            <thead class="table-success">
+                <th>first</th>
+                <th>last</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tom</td>
+                    <td>Hoellthaler</td>
+                </tr>
+                <tr>
+                    <td>Tom</td>
+                    <td>Hoellthaler</td>
+                </tr>
+                <tr>
+                    <td>Tom</td>
+                    <td>Hoellthaler</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 {% endblock %}
