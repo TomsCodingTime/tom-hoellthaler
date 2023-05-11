@@ -138,6 +138,8 @@
       <path value="$PROJECT_DIR$/tom-hoellthaler/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/tom-hoellthaler/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/tom-hoellthaler/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/tom-hoellthaler/vendor/twbs/bootstrap" />
+      <path value="$PROJECT_DIR$/tom-hoellthaler/vendor/symfony/apache-pack" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1">

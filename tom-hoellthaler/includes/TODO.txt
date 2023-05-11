@@ -1,15 +1,79 @@
-1 > style.css aufraeumen
-1 > projekt auf aws laufen lassen
-1 > projekt auf bitBucket bringen
-1 > JS auslagern
-1 > responsive Design
+HOME
+o fix left margin
+    oo fluid: margin: 3.5% 0 0 0;
+> nav:
+    >> solve jQuery puzzle
+    >> restyle
+    oo delete 'logo'
+> hero:
+    >> negative + fix positioning
+    oo right img border-left
+    >> clearer image? correction of size
+> tech:
+    oo mirroring horizontally
+    oo mirroring gradient?
+    >> add all techs as icon (auf unterem Boarder! je card)
+    >> kurzer Intro-Text ins Projektverstaendnis
+o interests:
+    oo stylen
+    oo evtl. gradient background?
+> code:
+    oo einbinden
+    >> stylen
+    oo nerd-check: status ^^
+> footer:
+    oo switch person to techstack
+    oo disable code
+    >> fix top margins to code
+    >> each mail-link should guide to individual cf-form
+    >> disable or delete logos
+        oo home:
+            >>> WA(?), LinkedIn, Mail
+        >> code:
+            >>> <li class="ms-3 no-bullet"><a class="link-dark" href="#"><img class="icons" src="../includes/icons/github.svg"></a></li>
+                                    <li class="ms-3 no-bullet"><a class="link-dark" href="#"><img class="icons" src="../includes/icons/bitbucket.svg"></a></li>
+                                    <li class="ms-3 no-bullet"><a class="link-dark" href="#"><img class="icons" src="../includes/icons/docker.svg"></a></li>
+                                    <li class="ms-3 no-bullet"><a class="link-dark" href="#"><img class="icons" src="../includes/icons/linkedin.svg"></a></li>
+                                    <li class="ms-3 no-bullet"><a class="link-dark" href="#"><img class="icons" src="../includes/icons/mail.svg"></a></li>
+        >> ocean:
+            >>>  <li class="ms-3 no-bullet"><a class="link-dark" href="#"><img class="icons" src="../includes/icons/linkedin.svg"></a></li>
+                                    <li class="ms-3 no-bullet"><a class="link-dark" href="#"><img class="icons" src="../includes/icons/mail.svg"></a></li>
+        >> bike:
+            >>> <li class="ms-3 no-bullet"><a class="link-dark" href="#"><img class="icons" src="../includes/icons/instagram.svg"></a></li>
+                                    <li class="ms-3 no-bullet"><a class="link-dark" href="#"><img class="icons" src="../includes/icons/komoot.svg"></a></li>
+                                    <li class="ms-3 no-bullet"><a class="link-dark" href="#"><img class="icons" src="../includes/icons/mail.svg"></a></li>
+    oo Schriftarten korrigieren
+    >> "imprint"?
+    >> mini contact form?
+    >> wie geil waere es,
+       wenn man unten rechts WA einbinden wuerde?
+       >>> oder eben e-mail (evtl. mit zoom js?)
+    >> py-4/-5 (_utilities.scss in cdn)
+    >> Cookies und externe Skripte
+        >>> ich bin der Überzeugung, dass Resonanz,
+            nicht als Daten, sondern im Gespräch,
+            wahrgenommen werden sollte.
+        >>> Liebhaberei (halbironisch) einbauen.
+    oo Kontakt
+ > contact: KontaktController implementieren
+ > biken: BikingController implementieren
+ > ocean:
+    >> OceanController implementieren
+    >> easter egg: <!--
+                            ____
+                           /    \
+                          |      |
+                   `~~^~~~^~~~^~~~^~~~^~~~^~~~^~~~
+                      ~	------      ~     ~
+                          --------	      Sittin'
+                       ~    ------          in
+                         -- ---- -   ~     the
+                         -- ---- ---     morning
+                    ~   --  -- --- -       sun  ~
+                     ~   ------------
+                      --  -- --- -  --    ~
+                        ---   ---- -  	        -->
 
-2 > Logo verlinken und klickbar machen
-2 > Thumbnail-Badges shouldnt stop effect
-2 > TOP-Button rein CSS und langsameres erscheinen?
-2 > get rid of CDNs
 
-3 > icons verlinken
-3 > newsletter button in Fantasia-color
-3 > color-guide
-
+> future versions: everything in DB
+> de/en
