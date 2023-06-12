@@ -58,21 +58,14 @@ o interests:
  > contact: KontaktController implementieren
  > biken: BikingController implementieren
  > ocean:
-    >> OceanController implementieren
-    >> easter egg: <!--
-                            ____
-                           /    \
-                          |      |
-                   `~~^~~~^~~~^~~~^~~~^~~~^~~~^~~~
-                      ~	------      ~     ~
-                          --------	      Sittin'
-                       ~    ------          in
-                         -- ---- -   ~     the
-                         -- ---- ---     morning
-                    ~   --  -- --- -       sun  ~
-                     ~   ------------
-                      --  -- --- -  --    ~
-                        ---   ---- -  	        -->
+    oo OceanController implementieren
+    >> stylen (bootstrap 5!)
+    >> head? favicon?
+    oo easter egg: "Sittin' in the Morning Sun"
+
+
+
+
 
 
 > future versions: everything in DB
