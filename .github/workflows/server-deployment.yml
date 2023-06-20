@@ -1,38 +1,30 @@
-name: CI-SFTP
- 
-# Controls when the action will run. 
+name: Deploy to IONOS
+
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
-#  pull_request:
-#    branches: [ main ]
- 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
- 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+    branches:
+      - main
+
 jobs:
-  # This workflow contains a single job called "SFTP"
-  deploy-via-sftp:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-          
-      - name: SFTP Deploy
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.1
-        with:
-          username: ${{ secrets.SSH_USER }}
-          server: ${{ secrets.SSH_HOST }}
-          port: ${{ secrets.SSH_PORT }} # default is 22
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
- 
-          
-          # will put all file under this path
-          local_path: ./* # default is ./*
-          # files will copy to under remote_path
-          remote_path: /var/www # ${{ secrets.SSH_TARGET }}
-          
-          # sftp args
-          args: '-o ConnectTimeout=5'
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ssh rsync
+        npm install
+
+    - name: Deploy code
+      uses: easingthemes/ssh-deploy@v2.1.5
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        ARGS: "-rltgoDzvO --delete"
+        SOURCE: "."
+        REMOTE_HOST: ${{ secrets.SSH_HOST }}
+        REMOTE_USER: ${{ secrets.SSH_USER }}
+        TARGET: "/var/www/html"
